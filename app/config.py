@@ -1,10 +1,25 @@
+from enum import Enum
+
+# Weather Stack API access token
 ACCESS_TOKEN = '610acf4c1d203448cd6f671955c5e8aa'
 
+# List of supported questions
 QUESTIONS = [
     "Should I go outside?",
     "Should I wear sunscreen?",
     "Can I fly my kite?"
 ]
+
+
+class EQuestion(Enum):
+    """
+    Index of questions above
+    """
+    UNKNOWN = -1
+    SHOULD_I_GO_OUTSIDE = 0
+    SHOULD_I_WEAR_SUNSCREEN = 1
+    CAN_I_FLY_MY_KITE = 2
+
 
 # Weather code table can get from https://weatherstack.com/documentation
 # Current I select all codes which related to rain
